@@ -3,12 +3,18 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import Head from 'next/head';
 
 export default function HomePage() {
   const router = useRouter();
 
   return (
+    
     <main className="relative min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden flex flex-col items-center justify-center text-center px-6 py-16">
+      <Head>
+        <title>EULAP Digital Solutions</title>
+        <meta name="description" content="Explore our digital tools for modern businesses." />
+      </Head>
       {/* Animated Background Circles */}
 <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
   <div className="absolute bg-blue-300 opacity-30 rounded-full blur-3xl animate-float-x
