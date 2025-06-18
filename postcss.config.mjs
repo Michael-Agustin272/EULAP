@@ -1,5 +1,13 @@
-const config = {
-  plugins: ["@tailwindcss/postcss"],
-};
+export default {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+  theme: {
+    extend: {
+      colors: {
+        customBlue: "#2E3944",
+      },
+    },
+  }
+}
 
-export default config;
