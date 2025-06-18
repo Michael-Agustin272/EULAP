@@ -11,18 +11,15 @@ export default function HomePage() {
     <main className="relative min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden flex flex-col items-center justify-center text-center px-6 py-16">
       {/* Animated Background Circles */}
 <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-  {/* Top Left Circle */}
-  <div className="absolute bg-blue-300 opacity-30 rounded-full blur-3xl animate-pulse-slow
+  <div className="absolute bg-blue-300 opacity-30 rounded-full blur-3xl animate-float-x
                   w-60 h-60 sm:w-72 sm:h-72 lg:w-96 lg:h-96
                   top-10 -left-20 sm:-left-10" />
 
-  {/* Top Right Circle */}
-  <div className="absolute bg-blue-200 opacity-20 rounded-full blur-2xl animate-pulse-slow
+  <div className="absolute bg-blue-200 opacity-20 rounded-full blur-2xl animate-float-y
                   w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72
                   top-60 right-0 sm:top-40 sm:right-10" />
 
-  {/* Bottom Center Circle */}
-  <div className="absolute bg-blue-400 opacity-10 rounded-full blur-2xl animate-pulse-slow
+  <div className="absolute bg-blue-400 opacity-10 rounded-full blur-2xl animate-float-rotate
                   w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96
                   bottom-0 left-1/2 transform -translate-x-1/2" />
 </div>
