@@ -58,6 +58,23 @@ export default function DigitalSolutionsPage() {
 
     
     <div className="w-full min-h-screen bg-gradient-to-b from-white to-blue-50 flex flex-col items-center justify-center px-6 py-12">
+
+            {/* Animated Background Circles */}
+{/* Animated Background Circles */}
+<div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+  <div className="absolute bg-blue-300 opacity-30 rounded-full blur-3xl animate-float-x
+                  w-60 h-60 sm:w-72 sm:h-72 lg:w-96 lg:h-96
+                  top-10 -left-20 sm:-left-10" />
+
+  <div className="absolute bg-blue-200 opacity-20 rounded-full blur-2xl animate-float-y
+                  w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72
+                  top-60 right-0 sm:top-40 sm:right-10" />
+
+  <div className="absolute bg-blue-400 opacity-10 rounded-full blur-2xl animate-float-rotate
+                  w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96
+                  bottom-0 left-1/2 transform -translate-x-1/2" />
+</div>
+
       <h2 className="text-4xl font-bold text-blue-900 mb-2 text-center">Our Digital Solutions</h2>
       <p className="text-customGrey mb-6 text-center max-w-2xl">
         Explore our smart, scalable solutions tailored to support your business success.
@@ -65,9 +82,9 @@ export default function DigitalSolutionsPage() {
 
       <div
         id="scroll-container"
-        className="w-full max-w-7xl overflow-x-auto scroll-smooth scrollbar-hide"
+        className="w-full max-w-7xl overflow-x-auto scroll-smooth scrollbar-hide z-10"
       >
-        <div className="flex gap-4 px-2 py-4 w-max">
+        <div className="flex gap-4 px-2 py-4 w-max z-10">
           {products.map((product) => (
             <div
               key={product.title}
@@ -75,10 +92,10 @@ export default function DigitalSolutionsPage() {
               className="bg-white border border-blue-200 rounded-xl shadow-sm transition duration-300 flex flex-col items-center justify-center text-center cursor-pointer hover:shadow-md hover:bg-blue-100
                          w-40 h-40 sm:w-44 sm:h-44 md:w-48 md:h-48 lg:w-52 lg:h-52 xl:w-56 xl:h-56"
             >
-              <div className="w-14 h-14 mb-3 flex items-center justify-center rounded-full bg-blue-200 text-2xl text-blue-800 shadow-inner">
+              <div className="w-14 h-14 mb-3 flex items-center justify-center rounded-full bg-blue-200 text-2xl text-blue-800 shadow-inner z-20">
                 {product.icon}
               </div>
-              <h3 className="text-xs sm:text-sm font-semibold text-blue-900 px-2 leading-tight line-clamp-2">
+              <h3 className="text-xs sm:text-sm font-semibold text-blue-900 px-2 leading-tight line-clamp-2 z-20">
                 {product.title}
               </h3>
             </div>
@@ -98,7 +115,7 @@ export default function DigitalSolutionsPage() {
     >
       <button
         onClick={() => setSelected(null)}
-        className="absolute top-2 right-3 text-gray-400 hover:text-red-500 text-2xl font-bold"
+        className="absolute top-2 right-3 text-gray-400 hover:text-red-500 text-2xl font-bold z-50"
       >
         ×
       </button>
@@ -114,6 +131,7 @@ export default function DigitalSolutionsPage() {
     href="https://eulap.com/"
     target="_blank"
     rel="noopener noreferrer"
+     className="z-10"
   >
     <button
       className="px-8 py-3 bg-blue-600 text-white text-lg rounded-full shadow-lg hover:bg-blue-700 transition duration-300 cursor-pointer"
@@ -123,21 +141,27 @@ export default function DigitalSolutionsPage() {
   </a>
 
       {/* Logo */}
-      <div className="absolute top-10 left-10 z-10">
-        <Image src="/logo.png" alt="EULAP Logo" width={200} height={200} />
-      </div>
+<div className="absolute top-10 left-10 z-20 w-32 sm:w-40 md:w-48">
+  <Image
+    src="/logo.png"
+    alt="EULAP Logo"
+    width={0}
+    height={0}
+    sizes="100vw"
+    className="w-full h-auto"
+  />
+</div>
 
-            {/* MINDACON Logo */}
-      <div className="absolute top-10 right-10 z-10">
-        <Image src="/MINDACON.png" alt="MINDACON Logo" width={200} height={200} />
-      </div>
-
-              {/* Animated Background Circles */}
-      <div className="absolute w-full h-full top-0 left-0 overflow-hidden pointer-events-none z-(-2)">
-        <div className="absolute bg-blue-300 opacity-30 rounded-full w-96 h-96 animate-pulse-slow top-10 -left-20 blur-3xl" />
-        <div className="absolute bg-blue-200 opacity-20 rounded-full w-72 h-72 animate-pulse-slow top-60 right-0 blur-2xl" />
-        <div className="absolute bg-blue-400 opacity-10 rounded-full w-80 h-80 animate-pulse-slow bottom-0 left-1/2 blur-2xl transform -translate-x-1/2" />
-      </div>
+<div className="absolute top-10 right-10 z-20 w-32 sm:w-40 md:w-48">
+  <Image
+    src="/MINDACON.png"
+    alt="MINDACON Logo"
+    width={0}
+    height={0}
+    sizes="100vw"
+    className="w-full h-auto"
+  />
+</div>
       
     </div>
 

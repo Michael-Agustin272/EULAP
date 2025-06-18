@@ -10,21 +10,45 @@ export default function HomePage() {
   return (
     <main className="relative min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden flex flex-col items-center justify-center text-center px-6 py-16">
       {/* Animated Background Circles */}
-      <div className="absolute w-full h-full top-0 left-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute bg-blue-300 opacity-30 rounded-full w-96 h-96 animate-pulse-slow top-10 -left-20 blur-3xl" />
-        <div className="absolute bg-blue-200 opacity-20 rounded-full w-72 h-72 animate-pulse-slow top-60 right-0 blur-2xl" />
-        <div className="absolute bg-blue-400 opacity-10 rounded-full w-80 h-80 animate-pulse-slow bottom-0 left-1/2 blur-2xl transform -translate-x-1/2" />
-      </div>
+<div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+  {/* Top Left Circle */}
+  <div className="absolute bg-blue-300 opacity-30 rounded-full blur-3xl animate-pulse-slow
+                  w-60 h-60 sm:w-72 sm:h-72 lg:w-96 lg:h-96
+                  top-10 -left-20 sm:-left-10" />
+
+  {/* Top Right Circle */}
+  <div className="absolute bg-blue-200 opacity-20 rounded-full blur-2xl animate-pulse-slow
+                  w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72
+                  top-60 right-0 sm:top-40 sm:right-10" />
+
+  {/* Bottom Center Circle */}
+  <div className="absolute bg-blue-400 opacity-10 rounded-full blur-2xl animate-pulse-slow
+                  w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96
+                  bottom-0 left-1/2 transform -translate-x-1/2" />
+</div>
 
       {/* Logo */}
-      <div className="absolute top-10 left-10 z-10">
-        <Image src="/logo.png" alt="EULAP Logo" width={200} height={200} />
-      </div>
+<div className="absolute top-10 left-10 z-20 w-32 sm:w-40 md:w-48">
+  <Image
+    src="/logo.png"
+    alt="EULAP Logo"
+    width={0}
+    height={0}
+    sizes="100vw"
+    className="w-full h-auto"
+  />
+</div>
 
-                  {/* MINDACON Logo */}
-            <div className="absolute top-10 right-10 z-10">
-              <Image src="/MINDACON.png" alt="MINDACON Logo" width={200} height={200} />
-            </div>
+<div className="absolute top-10 right-10 z-20 w-32 sm:w-40 md:w-48">
+  <Image
+    src="/MINDACON.png"
+    alt="MINDACON Logo"
+    width={0}
+    height={0}
+    sizes="100vw"
+    className="w-full h-auto"
+  />
+</div>
 
       {/* Hero Content */}
       <div className="max-w-4xl z-10">
